@@ -14,6 +14,7 @@ def sum_digit(num):
     return result
 
 
+# replace 100000 with 1 if the ticket number starts with 1
 for i in range(100000, 1000000):
     if sum_digit(i) % 7 == 0 and sum_digit(i + 1) % 7 == 0:
         print(str(i) + ' and ' + str(i + 1))
