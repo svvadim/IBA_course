@@ -14,10 +14,10 @@ def break_into_squares(a, b, count=0):
         print("Всего ", count)
         return
     if a > b:
-        print("Квадрат со стороной ", b, " и ", b)
+        print("Квадрат со стороной ", b)
         break_into_squares(a - b, b, count + 1)
     else:
-        print("Квадрат со стороной ", a, " и ", a)
+        print("Квадрат со стороной ", a)
         break_into_squares(a, b - a, count + 1)
 
 
