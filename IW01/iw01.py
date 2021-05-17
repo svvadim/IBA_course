@@ -16,7 +16,7 @@ def BubbleSort(A):  # сортировка пузырьком
                 A[j + 1] = a
 
 
-def InsertionSort(A):  # сортировка пузырьком
+def InsertionSort(A):  # сортировка вставками
     for i in range(1, len(A)):
         t = A[i]
         j = i - 1
