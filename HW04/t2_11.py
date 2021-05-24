@@ -4,17 +4,11 @@
 # Найти самое короткое слово в файле F2.
 
 def main(from_file, to_file):
-    f_file = open(from_file, "r")
-    t_file = open(to_file, "w")
-    lines = []
-    for line in f_file:
-        if line.count(' ') == 0:
-            lines.append(line)
-    f_file.close()
-    t_file.writelines(lines)
-    min_line = min((word for word in lines if word), key=len)
-    t_file.close()
-    return min_line
+    with open(from_file, "r") as f_file:
+        lines = [line for line in f_file if line.count(' ') == 0]
+    with open(to_file, "w") as t_file:
+        t_file.writelines(lines)
+    return min((word for word in lines if word), key=len)
 
 
 print(main("F1.txt", "F2.txt"))
