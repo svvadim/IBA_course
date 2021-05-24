@@ -6,7 +6,7 @@ class Store:
         if len(str(storeName)) > 0:
             self.__storeName = str(storeName)
 
-    def add_product(self, product, number_of_products):
+    def add_product(self, product, number_of_products=1):
         if number_of_products <= 0:
             return
         for item in self.__storage:
